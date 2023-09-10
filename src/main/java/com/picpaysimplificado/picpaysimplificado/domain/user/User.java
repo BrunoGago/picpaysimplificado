@@ -18,7 +18,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long userId;
 
     private String firstName;
 
@@ -32,7 +32,7 @@ public class User {
 
     private String password;
 
-    private BigDecimal balance;
+    private BigDecimal userBalance;
 
     @Enumerated(EnumType.STRING)
     private UserType userType;
