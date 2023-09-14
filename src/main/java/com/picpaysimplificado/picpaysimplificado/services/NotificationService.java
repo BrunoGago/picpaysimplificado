@@ -19,17 +19,18 @@ public class NotificationService {
     private String notificationUrl;
 
     public void sendNotification(User user, String message) throws Exception{
+
         String email = user.getEmail();
 
         NotificationDTO notificationRequest = new NotificationDTO(email, message);
 
-       ResponseEntity<String> notificationResponse = restTemplate
+        ResponseEntity<String> notificationResponse = restTemplate
                .postForEntity(notificationUrl, notificationRequest, String.class);
 
-       if(!(notificationResponse.getStatusCode() == HttpStatus.OK)){
+        if(!(notificationResponse.getStatusCode() == HttpStatus.OK)){
            System.out.println("Erro ao enviar a notificação");
            throw new Exception("Notificação está indiponível neste momento, tente mais tarde!");
-       }
+        }
     }
 
 }
