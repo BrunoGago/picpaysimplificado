@@ -1,0 +1,2 @@
+INSERT INTO TB_USERS (first_name, last_name, document, email, user_balance, user_type, password) VALUES ('Bruno', 'Gago', '28906500068', 'brunogago123@gmail.com', 10, 'COMMON', '123456@test');
+INSERT INTO TB_USERS (first_name, last_name, document, email, user_balance, user_type, password) VALUES ('Milena', 'de Carli', '28906500069', 'milena123@gmail.com', 10, 'COMMON', '123456@test');
